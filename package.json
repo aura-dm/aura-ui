@@ -1,12 +1,12 @@
 {
-  "name": "@aura-dm/aura-ui",
+  "name": "@aura-dm/ui",
   "description": "Design system and library of UI components for use with Vue.",
   "author": "aura-dm",
   "license": "MIT",
   "version": "0.1.0",
   "main": "./dist/aura-ui.common.js",
   "module": "./src/main.js",
-  "repository": "https://github.com/aura-dm/aura-ui",
+  "repository": "https://github.com/aura-dm/ui",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
