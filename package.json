@@ -1,0 +1,58 @@
+{
+  "name": "@aura-dm/aura-ui",
+  "description": "Design system and library of UI components for use with Vue.",
+  "author": "aura-dm",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "./dist/aura-ui.common.js",
+  "module": "./src/main.js",
+  "repository": "https://github.com/aura-dm/aura-ui",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name aura-ui src/main.js",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11",
+    "vue-styled-components": "^1.5.1"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "lodash": "^4.17.15",
+    "v-click-outside": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-links": "^5.3.14",
+    "@storybook/addons": "^5.3.14",
+    "@storybook/vue": "^5.3.14",
+    "@vue/cli-plugin-babel": "~4.4.6",
+    "@vue/cli-plugin-eslint": "~4.4.6",
+    "@vue/cli-plugin-unit-jest": "~4.4.6",
+    "@vue/cli-service": "~4.4.6",
+    "@vue/eslint-config-standard": "^5.1.0",
+    "@vue/test-utils": "1.0.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-vue": "^2.0.2",
+    "eslint": "^7.4.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.1.2",
+    "vue-styled-components": "^1.5.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

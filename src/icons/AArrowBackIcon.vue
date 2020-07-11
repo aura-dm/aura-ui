@@ -1,0 +1,17 @@
+<template>
+  <a-icon v-bind="$props">
+    <path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z" />
+    <path d="M0 0h24v24H0z" fill="none" />
+  </a-icon>
+</template>
+
+<script>
+import AIcon from '../AIcon/AIcon';
+
+export default {
+  name: 'a-arrow-back-icon',
+  components: {
+    AIcon,
+  },
+};
+</script>
