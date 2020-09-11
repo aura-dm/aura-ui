@@ -23,7 +23,7 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-styled-components": "^1.5.1"
   },
   "dependencies": {

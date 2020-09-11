@@ -1,13 +1,13 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
   extends: [
     'plugin:vue/essential',
   ],
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -16,21 +16,21 @@ module.exports = {
     'semi': ['error', 'always'],
     'quotes': [
       'error',
-      'single'
+      'single',
     ],
     'comma-dangle': [
       'error',
-      'always-multiline'
-    ]
+      'always-multiline',
+    ],
   },
   overrides: [
     {
       files: [
-        '**/*.test.{j,t}s?(x)'
+        '**/*.test.{j,t}s?(x)',
       ],
       env: {
-        jest: true
-      }
-    }
-  ]
-}
+        jest: true,
+      },
+    },
+  ],
+};
