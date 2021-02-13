@@ -5,7 +5,7 @@
     :class="{
       'is-active': isActive,
       'is-sub-menu-item': isSubMenu,
-      'is-sub-menu-title': isSubMenuTitle
+      'is-sub-menu-title': isSubMenuTitle,
     }"
     alignText="left"
     :component="component"
@@ -29,9 +29,6 @@ export default {
     ContentLeft,
     MainContent,
     ComponentWrapper,
-  },
-  mounted() {
-    console.log(this.component);
   },
   props: {
     activeClass: {
