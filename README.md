@@ -1,35 +1,11 @@
 # Aura UI
 
-## Project setup
+## Vue JS Component Library
+
+Vue components with theming. Uses [Vue Styled Components](https://github.com/styled-components/vue-styled-components) for styling.
+
+### Installation
 
 ```
-npm install
+npm i @aura-dm/ui
 ```
-
-### Starts Storybook for development
-
-```
-npm run storybook
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Run your unit tests
-
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
