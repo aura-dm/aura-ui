@@ -29,7 +29,11 @@ jobs:
           registry-url: https://registry.npmjs.org/
           scope: '@aura-dm'
       - run: npm ci
-      - run: npm publish
+      - run: |
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm config set scope "@aura-dm"
+          npm config list
+          npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
