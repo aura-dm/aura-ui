@@ -17,8 +17,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "files": [
-    "dist/*",
-    "src/*"
+    "dist/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
