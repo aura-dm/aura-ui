@@ -4,8 +4,8 @@
   "author": "aura-dm",
   "license": "MIT",
   "version": "0.1.4",
-  "main": "./dist/aura-ui.common.js",
-  "module": "./src/main.js",
+  "main": "./dist/aura-ui.umd.min.js",
+  "module": "./src/index.js",
   "repository": "https://github.com/aura-dm/ui",
   "keywords": [
     "aura",
@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name aura-ui src/main.js",
+    "build": "vue-cli-service build --target lib --name aura-ui src/index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",

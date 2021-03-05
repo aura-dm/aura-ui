@@ -2,7 +2,7 @@
   <wrapper>
     <a-loading v-if="isContent" />
     <grid v-else :class="breakpoints">
-      <resizable @resize="onResize" />
+      <a-resizable @resize="onResize" />
       <slot />
     </grid>
   </wrapper>
@@ -10,15 +10,15 @@
 
 <script>
 import ALoading from '../ALoading';
-import Resizable from '../utils/Resizable';
+import AResizable from '../utils/AResizable';
 import { Grid, Wrapper } from './AGrid.styles';
 
 export default {
   name: 'a-grid',
   components: {
     ALoading,
+    AResizable,
     Grid,
-    Resizable,
     Wrapper,
   },
   computed: {
