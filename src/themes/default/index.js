@@ -1,4 +1,5 @@
 import { colors, fonts } from './variables';
+import breakpoints from '../breakpoints';
 
 // components
 import actionBar from './actionBar';
@@ -15,6 +16,7 @@ import textField from './textField';
 import toast from './toast';
 
 export default {
+  breakpoints,
   colors,
   fonts,
   actionBar,

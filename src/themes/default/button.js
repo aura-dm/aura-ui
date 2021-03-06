@@ -3,9 +3,9 @@ import { colors, fonts } from './variables';
 export default {
   color: colors.text2,
   fontFamily: fonts.primary,
-  fontSize: '1em',
-  fontWeight: 600,
-  lineHeight: '1.2em',
+  fontSize: '1rem',
+  fontWeight: 400,
+  lineHeight: '1.2rem',
   _focus: {
     color: colors.text1,
     outlineColor: colors.theme5,

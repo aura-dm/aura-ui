@@ -1,8 +1,8 @@
 const primary1 = '#a72a8c';
 
 export const fonts = {
-  primary: '"Source Sans Pro", Helvetica, Arial, sans-serif',
-  secondary: '"Source Sans Pro", Helvetica, Arial, sans-serif',
+  primary: '"Questrial", Helvetica, Arial, sans-serif',
+  secondary: '"Questrial", Helvetica, Arial, sans-serif',
 };
 
 export const colors = {
