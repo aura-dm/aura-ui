@@ -1,15 +1,14 @@
 <template>
-  <wrapper-element ref="main"></wrapper-element>
+  <div class="wrapper" ref="main"></div>
 </template>
 
 <script>
 import ResizeObserver from 'resize-observer-polyfill';
-import { WrapperElement } from './AResizable.styles';
 
 export default {
-  name: 'resizable',
-  components: { WrapperElement },
+  name: 'a-resizable',
   mounted() {
+    console.log(this.$refs);
     const { width, height } = this.$refs.main.getBoundingClientRect();
 
     this.$emit('resize', { height, width });
@@ -28,3 +27,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.wrapper {
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+</style>

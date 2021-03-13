@@ -1,17 +1,12 @@
 <template>
-  <wrapper :height="height" viewBox="0 0 24 24" :width="width">
+  <svg class="wrapper" :height="height" viewBox="0 0 24 24" :width="width">
     <slot></slot>
-  </wrapper>
+  </svg>
 </template>
 
 <script>
-import { Wrapper } from './AIcon.styles';
-
 export default {
   name: 'a-icon',
-  components: {
-    Wrapper,
-  },
   props: {
     height: {
       default: '20',
@@ -24,3 +19,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.wrapper {
+  fill: inherit;
+  flex-shrink: 0;
+}
+</style>

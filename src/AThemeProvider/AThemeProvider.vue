@@ -12,7 +12,6 @@ const getCSS = tokens => {
 
   Object.keys(tokens).forEach(key => {
     const component = tokens[key];
-    console.log(component);
 
     Object.keys(component).forEach(key => {
       variables.push(`${key}: ${component[key]};`);

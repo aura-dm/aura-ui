@@ -1,25 +1,22 @@
 <template>
-  <wrapper>
+  <div class="wrapper">
     <a-loading v-if="isContent" />
-    <grid v-else :class="breakpoints">
+    <div class="grid" v-else :class="breakpoints">
       <a-resizable @resize="onResize" />
       <slot />
-    </grid>
-  </wrapper>
+    </div>
+  </div>
 </template>
 
 <script>
 import ALoading from '../ALoading';
 import AResizable from '../utils/AResizable';
-import { Grid, Wrapper } from './AGrid.styles';
 
 export default {
   name: 'a-grid',
   components: {
     ALoading,
     AResizable,
-    Grid,
-    Wrapper,
   },
   computed: {
     isContent() {
@@ -33,6 +30,7 @@ export default {
   },
   methods: {
     onResize({ width }) {
+      console.log(width);
       let classes = [];
 
       if (width > 400) {
@@ -56,3 +54,32 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.wrapper {
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+
+  &.sm {
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &.md {
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &.lg,
+  &.xl {
+    column-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+  }
+}
+</style>

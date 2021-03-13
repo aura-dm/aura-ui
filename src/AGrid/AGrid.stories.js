@@ -5,7 +5,7 @@ export default { title: 'Grid' };
 export const Grid = () => ({
   components: { AGrid },
   template: `
-    <a-grid style="height: 400px; position: relative; width: 600px">
+    <a-grid style="height: 400px; position: relative; width: 100%">
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -20,6 +20,6 @@ export const Grid = () => ({
 export const GridLoading = () => ({
   components: { AGrid },
   template: `
-    <a-grid style="height: 400px; position: relative; width: 600px" />
+    <a-grid style="height: 400px; position: relative; width: 100%" />
   `,
 });
