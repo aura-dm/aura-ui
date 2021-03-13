@@ -1,16 +1,18 @@
 <template>
-  <wrapper>
+  <div class="wrapper">
     <slot />
-  </wrapper>
+  </div>
 </template>
 
 <script>
-import { Wrapper } from './AMenu.styles';
-
 export default {
   name: 'a-menu',
-  components: {
-    Wrapper,
-  },
 };
 </script>
+
+<style lang="scss" scoped>
+.wrapper {
+  flex-shrink: 0;
+  width: 100%;
+}
+</style>
