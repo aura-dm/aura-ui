@@ -16,26 +16,22 @@ import textField from './textField';
 import toast from './toast';
 
 export default {
-  id: 'default-theme',
-  name: 'Default Theme',
-  tokens: {
-    actionBar,
-    app: {
-      bgColor: colors.theme2,
-    },
-    breakpoints,
-    button,
-    colors,
-    fonts,
-    imageCard,
-    loading,
-    menuItem,
-    messagePanel,
-    modal,
-    select,
-    tab,
-    text,
-    textField,
-    toast,
+  breakpoints,
+  colors,
+  fonts,
+  actionBar,
+  app: {
+    bgColor: colors.theme2,
   },
+  button,
+  imageCard,
+  loading,
+  menuItem,
+  messagePanel,
+  modal,
+  select,
+  tab,
+  text,
+  textField,
+  toast,
 };

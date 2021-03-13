@@ -1,7 +1,7 @@
 import { colors, fonts } from './variables';
 
 export default {
-  color: colors.text1,
-  fontFamily: fonts.primary,
-  fontWeight: 400,
+  '--text-color': colors.theme1,
+  '--text-font-family': fonts.primary,
+  '--text-font-weight': 400,
 };

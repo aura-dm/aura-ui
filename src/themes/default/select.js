@@ -1,21 +1,15 @@
 import { colors, fonts } from './variables';
 
 export default {
-  menu: {
-    bgColor: colors.theme1,
-    border: `1px solid ${colors.theme3}`,
-    boxShadow: '0 0 2px 1px rgba(0, 0, 0, 0.1)',
-  },
-  menuItem: {
-    bgColor: colors.theme1,
-    borderBottom: `1px solid ${colors.theme3}`,
-    color: colors.text1,
-    fontFamily: fonts.secondary,
-    fontSize: '1em',
-    fontWeight: 600,
-    lineHeight: '1em',
-    _hover: {
-      color: colors.primary1,
-    },
-  },
+  '--select-menu-bg-color': colors.theme1,
+  '--select-menu-border': `1px solid ${colors.theme3}`,
+  '--select-menu-box-shadow': '0 0 2px 1px rgba(0, 0, 0, 0.1)',
+  '--select-menu-item-bg-color': colors.theme1,
+  '--select-menu-item-border-bottom': `1px solid ${colors.theme3}`,
+  '--select-menu-item-color': colors.text1,
+  '--select-menu-item-font-family': fonts.secondary,
+  '--select-menu-item-font-size': '1rem',
+  '--select-menu-item-font-weight': 600,
+  '--select-menu-item-line-height': '1rem',
+  '--select-menu-item__hover-color': colors.primary1,
 };

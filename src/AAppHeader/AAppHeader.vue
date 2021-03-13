@@ -1,24 +1,21 @@
 <template>
-  <wrapper>
-    <menu-button>
+  <div class="wrapper">
+    <div class="menu-button">
       <a-button><a-menu-icon /></a-button>
-    </menu-button>
+    </div>
     <slot name="logo" />
-  </wrapper>
+  </div>
 </template>
 
 <script>
 import AButton from '../AButton/AButton.vue';
 import AMenuIcon from '../icons/AMenuIcon.vue';
-import { MenuButton, Wrapper } from './AAppHeader.styles';
 
 export default {
   name: 'a-app-header',
   components: {
     AButton,
     AMenuIcon,
-    MenuButton,
-    Wrapper,
   },
   props: {
     menuItems: {
@@ -27,3 +24,16 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.wrapper {
+  align-items: center;
+  display: flex;
+  padding: 50px;
+  width: 100%;
+}
+
+.menu-button {
+  margin: 0 10px 0 0;
+}
+</style>

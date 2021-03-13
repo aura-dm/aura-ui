@@ -1,19 +1,14 @@
 import { colors, fonts } from './variables';
 
 export default {
-  bgColor: colors.theme1,
-  borderBottom: `1px solid ${colors.theme2}`,
-  borderLeft: '3px solid transparent',
-  color: colors.text2,
-  fontFamily: fonts.primary,
-  fontSize: '1em',
-  fontWeight: 600,
-  lineHeight: '1.2em',
-  _active: {
-    borderLeft: `3px solid ${colors.primary1}`,
-    color: colors.primary1,
-  },
-  _hover: {
-    color: colors.primary1,
-  },
+  '--menu-item-bg-color': colors.theme1,
+  '--menu-item-border-bottom': `1px solid ${colors.theme2}`,
+  '--menu-item-border-left': '3px solid transparent',
+  '--menu-item-color': colors.text2,
+  '--menu-item-font-family': fonts.primary,
+  '--menu-item-font-size': '1em',
+  '--menu-item-font-weight': 600,
+  '--menu-item-line-height': '1.2em',
+  '--menu-item__active-bg-color': colors.primary1,
+  '--menu-item__active-border-left': `3px solid ${colors.primary1}`,
 };

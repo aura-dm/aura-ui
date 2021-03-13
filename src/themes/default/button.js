@@ -1,26 +1,16 @@
 import { colors, fonts } from './variables';
 
 export default {
-  color: colors.text2,
-  fontFamily: fonts.primary,
-  fontSize: '1rem',
-  fontWeight: 400,
-  lineHeight: '1.2rem',
-  _focus: {
-    color: colors.text1,
-    outlineColor: colors.theme5,
-  },
-  _hover: {
-    color: colors.primary1,
-  },
-  _primary: {
-    color: colors.primary1,
-    _focus: {
-      color: colors.primary1,
-      outlineColor: colors.primary2,
-    },
-    _hover: {
-      color: colors.text1,
-    },
-  },
+  '--button-color': colors.text2,
+  '--button-font-family': fonts.primary,
+  '--button-font-size': '1rem',
+  '--button-font-weight': 400,
+  '--button-line-height': '1.2rem',
+  '--button__focus-color': colors.text2,
+  '--button__focus-outline-color': colors.theme5,
+  '--button__hover-color': colors.primary1,
+  '--button__primary-color': colors.primary1,
+  '--button__primary__focus-color': colors.primary1,
+  '--button__primary__focus-outline-color': colors.primary2,
+  '--button__primary__hover-color': colors.text1,
 };
