@@ -9,13 +9,15 @@ export const Wrapper = styled.button`
   flex-shrink: 0;
   fill: ${props => props.theme.button.color};
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   font-family: ${props => props.theme.button.fontFamily};
   font-size: ${props => props.theme.button.fontSize};
   font-weight: ${props => props.theme.button.fontWeight};
+  justify-content: center;
   line-height: ${props => props.theme.messagePanel.lineHeight};
   outline: transparent solid 2px;
   padding: 10px 14px 8px;
+  text-align: center;
   text-decoration: none;
   transition: all 150ms ease-in-out;
 

@@ -27,16 +27,16 @@ const variants = {
     lineHeight: 1.2,
   },
   p: {
-    fontSize: '1.3rem',
+    fontSize: '1.4rem',
     lineHeight: 1.5,
   },
 };
 
-export const Typography = styled('button', { variant: String })`
+export const Typography = styled('p', { variant: String })`
   color: ${props => props.theme.typography.color};
   font-family: ${props => props.theme.typography.fontFamily};
-  font-size: ${props => variants[props.variant]?.fontSize};
+  font-size: ${props => variants[props.variant].fontSize};
   font-weight: ${props => props.theme.typography.fontWeight};
-  line-height: ${props => variants[props.variant]?.lineHeight};
+  line-height: ${props => variants[props.variant].lineHeight};
   margin: 0 0 1rem;
 `;

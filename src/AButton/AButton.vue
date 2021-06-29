@@ -1,7 +1,6 @@
 <template>
   <wrapper
     v-bind="$props"
-    :align-text="alignText"
     :as="component"
     :class="{
       'is-primary': isPrimary,
@@ -21,11 +20,6 @@ export default {
   name: 'a-button',
   components: {
     Wrapper,
-  },
-  methods: {
-    onClick(evt) {
-      this.$emit('click', evt);
-    },
   },
   props: {
     component: {
