@@ -1,31 +1,14 @@
-import AAddIcon from './AAddIcon';
-import AArrowBackIcon from './AArrowBackIcon';
-import ABlockIcon from './ABlockIcon';
-import ACheckCircleIcon from './ACheckCircleIcon';
-import ACheckIcon from './ACheckIcon';
-import ACloseIcon from './ACloseIcon';
-import ACreateIcon from './ACreateIcon';
-import AErrorIcon from './AErrorIcon';
-import AInfoIcon from './AInfoIcon';
-import AListIcon from './AListIcon';
-import ALogoutIcon from './ALogoutIcon';
-import AMenuIcon from './AMenuIcon';
-import AMoreIcon from './AMoreIcon';
-import ARemoveIcon from './ARemoveIcon';
-
-export default {
-  AAddIcon,
-  AArrowBackIcon,
-  ABlockIcon,
-  ACheckCircleIcon,
-  ACheckIcon,
-  ACloseIcon,
-  ACreateIcon,
-  AErrorIcon,
-  AInfoIcon,
-  AListIcon,
-  ALogoutIcon,
-  AMenuIcon,
-  AMoreIcon,
-  ARemoveIcon,
-};
+export { default as AAddIcon } from './AAddIcon';
+export { default as AArrowBackIcon } from './AArrowBackIcon';
+export { default as ABlockIcon } from './ABlockIcon';
+export { default as ACheckCircleIcon } from './ACheckCircleIcon';
+export { default as ACheckIcon } from './ACheckIcon';
+export { default as ACloseIcon } from './ACloseIcon';
+export { default as ACreateIcon } from './ACreateIcon';
+export { default as AErrorIcon } from './AErrorIcon';
+export { default as AInfoIcon } from './AInfoIcon';
+export { default as AListIcon } from './AListIcon';
+export { default as ALogoutIcon } from './ALogoutIcon';
+export { default as AMenuIcon } from './AMenuIcon';
+export { default as AMoreIcon } from './AMoreIcon';
+export { default as ARemoveIcon } from './ARemoveIcon';

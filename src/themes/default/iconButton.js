@@ -1,13 +1,9 @@
-import { colors, fonts } from './variables';
+import { colors } from './variables';
 
 export default {
   backgroundColor: colors.theme1,
   borderColor: colors.theme5,
   color: colors.text2,
-  fontFamily: fonts.primary,
-  fontSize: '1.4rem',
-  fontWeight: 400,
-  lineHeight: 1.2,
   _focus: {
     color: colors.text1,
     outlineColor: colors.theme5,

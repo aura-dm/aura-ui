@@ -1,6 +1,5 @@
 import styled from 'vue-styled-components';
 
-
 export const Wrapper = styled.div`
   align-items: center;
   display: flex;
@@ -10,8 +9,12 @@ export const Wrapper = styled.div`
 `;
 
 export const PictureImage = styled.img`
-  opacity: 1;
+  opacity: 0;
   transition: opacity 500ms ease-out;
+
+  &.show {
+    opacity: 1;
+  }
 
   &.fill {
     height: 100%;

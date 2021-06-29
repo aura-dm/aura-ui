@@ -10,16 +10,13 @@ export default {
       outline: `3px solid ${colors.primary1}`,
     },
   },
-  title: {
+  subTitle: {
     color: colors.text2,
-    fontFamily: fonts.primary,
-    fontSize: '1.1em',
-    fontWeight: 600,
-    _focus: {
-      color: colors.primary1,
-    },
     _hover: {
-      color: colors.primary1,
+      color: colors.text1,
     },
+  },
+  title: {
+    color: colors.text1,
   },
 };

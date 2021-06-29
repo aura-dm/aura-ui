@@ -1,10 +1,12 @@
 <template>
   <wrapper :style="{ height, width }">
-    <a-loading v-if="src && imageUrl === ''" />
+    <a-loading v-if="src && isLoading" />
     <picture-image
-      v-else-if="imageUrl"
-      :class="fillType"
-      :src="imageUrl"
+      :class="{
+        fillType: true,
+        show: isLoading === false,
+      }"
+      :src="src"
       :style="{ border }"
     />
   </wrapper>
@@ -29,7 +31,7 @@ export default {
   data() {
     return {
       image: undefined,
-      imageUrl: '',
+      isLoading: true,
     };
   },
   destroyed() {
@@ -39,7 +41,7 @@ export default {
   },
   methods: {
     onImageLoaded() {
-      this.imageUrl = this.image.src;
+      this.isLoading = false;
       this.image.removeEventListener('load', this.onImageLoaded, false);
     },
   },

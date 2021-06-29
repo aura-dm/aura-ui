@@ -4,6 +4,7 @@ import breakpoints from '../breakpoints';
 // components
 import actionBar from './actionBar';
 import button from './button';
+import iconButton from './iconButton';
 import imageCard from './imageCard';
 import loading from './loading';
 import menuItem from './menuItem';
@@ -26,6 +27,7 @@ export default {
     fontFamily: fonts.primary,
   },
   button,
+  iconButton,
   imageCard,
   loading,
   menuItem,

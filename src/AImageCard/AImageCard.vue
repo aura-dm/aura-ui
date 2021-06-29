@@ -3,13 +3,23 @@
     <card-image class="image">
       <a-picture :height="imageHeight" :src="imageUrl" />
     </card-image>
-    <card-title v-if="title" class="title">{{ title }}</card-title>
+    <card-title v-if="title" component="h3" variant="h5">
+      {{ title }}
+    </card-title>
+    <card-sub-title v-if="subTitle" component="h5" variant="p">
+      {{ subTitle }}
+    </card-sub-title>
   </wrapper>
 </template>
 
 <script>
 import APicture from '../APicture';
-import { CardImage, CardTitle, Wrapper } from './AImageCard.styles';
+import {
+  CardImage,
+  CardSubTitle,
+  CardTitle,
+  Wrapper,
+} from './AImageCard.styles';
 
 export const TYPES = {
   FILL: 'fill',
@@ -21,6 +31,7 @@ export default {
   components: {
     APicture,
     CardImage,
+    CardSubTitle,
     CardTitle,
     Wrapper,
   },
@@ -34,6 +45,9 @@ export default {
       type: String,
     },
     imageUrl: {
+      type: String,
+    },
+    subTitle: {
       type: String,
     },
     title: {

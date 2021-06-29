@@ -14,7 +14,7 @@ export const Wrapper = styled.button`
   font-size: ${props => props.theme.button.fontSize};
   font-weight: ${props => props.theme.button.fontWeight};
   justify-content: center;
-  line-height: ${props => props.theme.messagePanel.lineHeight};
+  line-height: ${props => props.theme.button.lineHeight};
   outline: transparent solid 2px;
   padding: 10px 14px 8px;
   text-align: center;
