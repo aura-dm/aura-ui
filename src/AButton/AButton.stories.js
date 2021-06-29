@@ -1,34 +1,53 @@
-import { action } from '@storybook/addon-actions';
-
 import AButton from './';
-import AAddIcon from '../icons/AAddIcon';
 
 export default { title: 'Button' };
 
 export const defaultButton = () => ({
   components: { AButton },
-  template: '<a-button>Button</a-button>',
-});
-
-export const buttonWithLeftIcon = () => ({
-  components: { AButton, AAddIcon },
-  template: '<a-button><template v-slot:icon-left><a-add-icon /></template>Button</a-button>',
-});
-
-export const buttonWithRightIcon = () => ({
-  components: { AButton, AAddIcon },
-  template: '<a-button>Button<template v-slot:icon-right><a-add-icon /></template></a-button>',
-});
-
-export const buttonPrimary = () => ({
-  components: { AButton },
-  template: '<a-button :is-primary="true">Button</a-button>',
-});
-
-export const buttonClick = () => ({
-  components: { AButton },
-  template: '<a-button @click="handleClick">Button</a-button>',
+  template: `
+  <div>
+    <a-button
+      @click="handleClick"
+      style="margin: 0 0 10px"
+    >
+      Default
+    </a-button>
+    <a-button
+      @click="handleClick"
+      :is-primary="true"
+    >
+      Default Primary
+    </a-button>
+  </div>
+  `,
   methods: {
-    handleClick: action('Click'),
+    handleClick: () => alert('Clicked'),
+  },
+});
+
+export const disabledButton = () => ({
+  components: { AButton },
+  template: `
+    <div>
+      <a-button
+        @click="handleClick"
+        :is-disabled="true"
+        style="margin: 0 0 10px"
+        variant="outlined"
+      >
+        Disabled
+      </a-button>
+      <a-button
+        @click="handleClick"
+        :is-disabled="true"
+        :is-primary="true"
+        variant="outlined"
+      >
+      Disabled Primary
+      </a-button>
+    </div>
+  `,
+  methods: {
+    handleClick: () => alert('Clicked'),
   },
 });

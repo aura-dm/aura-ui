@@ -5,32 +5,21 @@
     :as="component"
     :class="{
       'is-primary': isPrimary,
-      'align-left': alignText === 'left',
-      'align-center': alignText === 'center',
-      'align-right': alignText === 'right'
     }"
     :disabled="isDisabled"
     :type="type"
-    @click="onClick"
+    @click="$emit('click', $event)"
   >
-    <icon-left v-if="$scopedSlots['icon-left']">
-      <slot name="icon-left" />
-    </icon-left>
     <slot></slot>
-    <icon-right v-if="$scopedSlots['icon-right']">
-      <slot name="icon-right" />
-    </icon-right>
   </wrapper>
 </template>
 
 <script>
-import { IconLeft, IconRight, Wrapper } from './AButton.styles';
+import { Wrapper } from './AButton.styles';
 
 export default {
   name: 'a-button',
   components: {
-    IconLeft,
-    IconRight,
     Wrapper,
   },
   methods: {
@@ -39,13 +28,6 @@ export default {
     },
   },
   props: {
-    alignText: {
-      default: 'center',
-      type: String,
-      validator: value => {
-        return value.match(/(left|center|right)/);
-      },
-    },
     component: {
       default: 'button',
       type: [Object, String],

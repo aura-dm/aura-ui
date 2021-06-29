@@ -11,9 +11,9 @@ import messagePanel from './messagePanel';
 import modal from './modal';
 import select from './select';
 import tab from './tab';
-import text from './text';
 import textField from './textField';
 import toast from './toast';
+import typography from './typography';
 
 export default {
   breakpoints,
@@ -22,6 +22,8 @@ export default {
   actionBar,
   app: {
     bgColor: colors.theme2,
+    color: colors.text1,
+    fontFamily: fonts.primary,
   },
   button,
   imageCard,
@@ -31,7 +33,7 @@ export default {
   modal,
   select,
   tab,
-  text,
   textField,
   toast,
+  typography,
 };
