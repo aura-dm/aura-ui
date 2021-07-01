@@ -27,20 +27,31 @@ export const CardImage = styled.div`
   outline: ${props => props.theme.imageCard.image.outline};
 `;
 
-export const CardTitle = styled(ATypography)`
+export const MainTitle = styled(ATypography)`
   color: ${props => props.theme.imageCard.color};
   margin: 0;
 `;
 
-export const CardSubTitle = styled(ATypography).attrs({
+export const Extra = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0 0;
+  width: 100%;
+`;
+
+export const SubTitle = styled(ATypography).attrs({
   component: 'h3',
   variant: 'h5',
 })`
   color: ${props => props.theme.imageCard.subTitle.color};
-  margin: 5px 0 0;
+  margin: 0;
   text-transform: uppercase;
 
   .can-hover:hover & {
     color: ${props => props.theme.imageCard.subTitle._hover.color};
   }
+`;
+
+export const Controls = styled.div`
+  margin: -1px 0 0;
 `;

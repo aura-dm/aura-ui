@@ -95,9 +95,7 @@ export const MenuItem = styled.span`
   }
 `;
 
-export const MenuLink = styled('span', {
-  activeClass: String,
-})`
+export const MenuLink = styled('span', { activeClass: String })`
   background-color: transparent;
   border: none;
   cursor: pointer;

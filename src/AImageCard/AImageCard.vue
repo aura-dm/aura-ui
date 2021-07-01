@@ -3,12 +3,17 @@
     <card-image class="image">
       <a-picture :height="imageHeight" :src="imageUrl" />
     </card-image>
-    <card-title v-if="title" component="h3" variant="h5">
+    <main-title v-if="title" component="h3" variant="h5">
       {{ title }}
-    </card-title>
-    <card-sub-title v-if="subTitle" component="h5" variant="p">
-      {{ subTitle }}
-    </card-sub-title>
+    </main-title>
+    <extra>
+      <sub-title v-if="subTitle" component="h5" variant="p">
+        {{ subTitle }}
+      </sub-title>
+      <controls>
+        <slot name="controls" />
+      </controls>
+    </extra>
   </wrapper>
 </template>
 
@@ -16,8 +21,11 @@
 import APicture from '../APicture';
 import {
   CardImage,
-  CardSubTitle,
-  CardTitle,
+  Controls,
+  Extra,
+  MainTitle,
+  MetaContent,
+  SubTitle,
   Wrapper,
 } from './AImageCard.styles';
 
@@ -31,8 +39,10 @@ export default {
   components: {
     APicture,
     CardImage,
-    CardSubTitle,
-    CardTitle,
+    Controls,
+    Extra,
+    MainTitle,
+    SubTitle,
     Wrapper,
   },
   props: {
