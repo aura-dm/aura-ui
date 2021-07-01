@@ -24,5 +24,8 @@ export default {
       color: colors.textAlt1,
       outlineColor: colors.primary2,
     },
+    _plain: {
+      color: colors.primary1,
+    },
   },
 };

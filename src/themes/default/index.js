@@ -3,6 +3,7 @@ import breakpoints from '../breakpoints';
 
 // components
 import actionBar from './actionBar';
+import appHeader from './appHeader';
 import button from './button';
 import iconButton from './iconButton';
 import imageCard from './imageCard';
@@ -26,6 +27,7 @@ export default {
     color: colors.text1,
     fontFamily: fonts.primary,
   },
+  appHeader,
   button,
   iconButton,
   imageCard,

@@ -4,6 +4,7 @@
     :as="component"
     :class="{
       'is-primary': isPrimary,
+      'is-plain': variant === 'plain',
     }"
     :disabled="isDisabled"
     :type="type"
@@ -72,6 +73,15 @@ export default {
       type: String,
       validator: value => {
         return value.match(/(button|submit)/);
+      },
+    },
+    variant: {
+      default: () => {
+        return 'default';
+      },
+      type: String,
+      validator: value => {
+        return value.match(/(default|plain)/);
       },
     },
   },

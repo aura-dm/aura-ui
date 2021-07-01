@@ -6,7 +6,6 @@ export const Wrapper = styled.button`
   border: 1px solid ${props => props.theme.iconButton.borderColor};
   border-radius: 20px;
   cursor: pointer;
-  color: ${props => props.theme.iconButton.color};
   flex-shrink: 0;
   fill: ${props => props.theme.iconButton.color};
   cursor: pointer;
@@ -24,15 +23,18 @@ export const Wrapper = styled.button`
     pointer-events: none;
   }
 
+  &.is-plain {
+    background-color: transparent;
+    border: none;
+  }
+
   &:focus {
     box-shadow: 0 0 0 2px ${props => props.theme.iconButton._focus.outlineColor};
-    color: ${props => props.theme.iconButton._focus.color};
     fill: ${props => props.theme.iconButton._focus.color};
   }
 
   &:hover {
     box-shadow: 0 0 0 2px ${props => props.theme.iconButton._focus.outlineColor};
-    color: ${props => props.theme.iconButton._hover.color};
     fill: ${props => props.theme.iconButton._hover.color};
   }
 
@@ -40,20 +42,27 @@ export const Wrapper = styled.button`
     background-color: ${props =>
       props.theme.iconButton._primary.backgroundColor};
     border: 1px solid ${props => props.theme.iconButton._primary.borderColor};
-    color: ${props => props.theme.iconButton._primary.color};
     fill: ${props => props.theme.iconButton._primary.color};
+
+    &.is-plain {
+      background-color: transparent;
+      border: none;
+      fill: ${props => props.theme.iconButton._primary._plain.color};
+    }
 
     &:hover {
       box-shadow: 0 0 0 2px
         ${props => props.theme.iconButton._primary._hover.outlineColor};
-      color: ${props => props.theme.iconButton._primary._hover.color};
       fill: ${props => props.theme.iconButton._primary._hover.color};
+
+      &.is-plain {
+        fill: ${props => props.theme.iconButton._primary._plain.color};
+      }
     }
 
     &:focus {
       box-shadow: 0 0 0 2px
         ${props => props.theme.iconButton._primary._focus.outlineColor};
-      color: ${props => props.theme.iconButton._primary._focus.color};
       fill: ${props => props.theme.iconButton._primary._focus.color};
     }
   }

@@ -10,9 +10,6 @@ export const MessageAndAction = () => ({
     <div style="background-color: #eeeeee; height: 400px; position: relative; width: 600px;">
       <a-message-panel text="You don't have any stuff!">
         <a-button :is-primary="true">
-          <template v-slot:icon-left>
-            <a-add-icon />
-          </template>
           Add some stuff?
         </a-button>
       </a-message-panel>
