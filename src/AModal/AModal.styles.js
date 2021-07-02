@@ -1,7 +1,5 @@
 import styled from 'vue-styled-components';
 
-import AButton from '../AButton';
-
 export const Wrapper = styled.div`
   align-items: center;
   display: flex;
@@ -16,6 +14,15 @@ export const Wrapper = styled.div`
   top: 0;
   width: 100%;
   z-index: 10000;
+
+  &.modal-enter-active,
+  &.modal-leave-active {
+    transition: opacity 500ms;
+  }
+  &.modal-enter,
+  &.modal-leave-to {
+    opacity: 0;
+  }
 `;
 
 export const Modal = styled.div`
@@ -27,6 +34,15 @@ export const Modal = styled.div`
   margin: 0 30px;
   width: 100%;
   z-index: 1;
+
+  .modal-enter-active &,
+  .modal-leave-active & {
+    transition: transform 500ms ease;
+  }
+  .modal-enter &,
+  .modal-leave-to & {
+    transform: translateY(-50px);
+  }
 `;
 
 export const ModalHeader = styled.header`
@@ -37,13 +53,13 @@ export const ModalHeader = styled.header`
   flex-shrink: 0;
   height: 60px;
   justify-content: flex-start;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 20px;
   position: relative;
 `;
 
 export const ModalCloseButton = styled.div`
   position: absolute;
-  right: 20px;
+  right: 10px;
 `;
 
 export const ModalTitle = styled.h2`
@@ -60,6 +76,7 @@ export const ModalContent = styled.div`
   display: flex;
   flex-grow: 1;
   min-height: 70px;
+  padding: 0 25px;
   position: relative;
 `;
 
