@@ -1,16 +1,19 @@
 <template>
   <modal-overlay>
-    <slot />
+    <modal-content>
+      <slot />
+    </modal-content>
     <overlay :transition-name="transitionName" />
   </modal-overlay>
 </template>
 
 <script>
-import { ModalOverlay, Overlay } from './AModalOverlay.styles';
+import { ModalContent, ModalOverlay, Overlay } from './AModalOverlay.styles';
 
 export default {
   name: 'a-modal-overlay',
   components: {
+    ModalContent,
     ModalOverlay,
     Overlay,
   },

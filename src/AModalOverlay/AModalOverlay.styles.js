@@ -9,6 +9,18 @@ export const ModalOverlay = styled('div')`
   width: 100%;
 `;
 
+export const ModalContent = styled('div')`
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+`;
+
 export const Overlay = styled('div', { transitionName: String })`
   background-color: ${props => props.theme.modalOverlay.bgColor};
   height: 100%;

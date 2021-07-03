@@ -1,18 +1,16 @@
 <template>
   <a-modal-overlay transitionName="dialog">
-    <dialog-wrapper>
-      <dialog-content :style="{ maxWidth }">
-        <a-modal-body
-          @close="$emit('close', id)"
-          :id="id"
-          :maxWidth="maxWidth"
-          :title="title"
-        >
-          <slot name="content" slot="content"></slot>
-          <slot name="footer" slot="footer"></slot>
-        </a-modal-body>
-      </dialog-content>
-    </dialog-wrapper>
+    <dialog-content :style="{ maxWidth }">
+      <a-modal-body
+        @close="$emit('close', id)"
+        :id="id"
+        :maxWidth="maxWidth"
+        :title="title"
+      >
+        <slot name="content" slot="content"></slot>
+        <slot name="footer" slot="footer"></slot>
+      </a-modal-body>
+    </dialog-content>
   </a-modal-overlay>
 </template>
 
@@ -27,7 +25,6 @@ export default {
     AModalBody,
     AModalOverlay,
     DialogContent,
-    DialogWrapper,
   },
   props: {
     id: {
