@@ -1,9 +1,9 @@
 import styled from 'vue-styled-components';
 
 export const ModalBody = styled.div`
-  background-color: ${props => props.theme.drawer.drawer.bgColor};
-  border: ${props => props.theme.drawer.drawer.border};
-  box-shadow: ${props => props.theme.drawer.drawer.boxShadow};
+  background-color: ${props => props.theme.modalBody.bgColor};
+  border: ${props => props.theme.modalBody.border};
+  box-shadow: ${props => props.theme.modalBody.boxShadow};
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -11,7 +11,7 @@ export const ModalBody = styled.div`
 
 export const ModalBodyHeader = styled.header`
   align-items: center;
-  background-color: ${props => props.theme.drawer.header.bgColor};
+  background-color: ${props => props.theme.modalBody.header.bgColor};
   display: flex;
   flex-shrink: 0;
   justify-content: flex-start;
@@ -33,7 +33,7 @@ export const ModalBodyContent = styled.div`
 
 export const ModalBodyFooter = styled.footer`
   align-items: center;
-  background-color: ${props => props.theme.drawer.footer.bgColor};
+  background-color: ${props => props.theme.modalBody.footer.bgColor};
   display: flex;
   flex-shrink: 0;
   justify-content: flex-end;
