@@ -1,5 +1,5 @@
 <template>
-  <modal-body :style="{ maxWidth }">
+  <modal-body :style="{ height, maxWidth }">
     <modal-body-header>
       <a-typography component="h2" variant="h4" style="margin: 0;">
         {{ title }}
@@ -40,14 +40,18 @@ export default {
     ACloseIcon,
     AIconButton,
     ATypography,
+    CloseButton,
     ModalBody,
     ModalBodyHeader,
-    CloseButton,
     ModalBodyContent,
     ModalBodyFooter,
     ModalBodyFooterButtons,
   },
   props: {
+    height: {
+      default: 'auto',
+      type: String,
+    },
     id: {
       required: true,
       type: String,

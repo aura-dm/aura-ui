@@ -6,18 +6,7 @@ export const ModalBody = styled.div`
   box-shadow: ${props => props.theme.drawer.drawer.boxShadow};
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 100%;
-
-  .drawer-enter-active &,
-  .drawer-leave-active & {
-    transition: transform 500ms ease;
-  }
-
-  .drawer-enter &,
-  .drawer-leave-to & {
-    transform: translateX(100%);
-  }
 `;
 
 export const ModalBodyHeader = styled.header`

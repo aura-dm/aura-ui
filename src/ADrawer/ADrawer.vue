@@ -3,6 +3,7 @@
     <drawer :style="{ maxWidth }">
       <a-modal-body
         @close="$emit('close', id)"
+        height="100%"
         :id="id"
         :maxWidth="maxWidth"
         :title="title"

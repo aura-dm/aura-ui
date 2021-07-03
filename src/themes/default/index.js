@@ -5,13 +5,14 @@ import breakpoints from '../breakpoints';
 import actionBar from './actionBar';
 import appHeader from './appHeader';
 import button from './button';
+import dialog from './dialog';
 import drawer from './drawer';
 import iconButton from './iconButton';
 import imageCard from './imageCard';
 import loading from './loading';
 import menuItem from './menuItem';
 import messagePanel from './messagePanel';
-import modal from './modal';
+import modalOverlay from './modalOverlay';
 import select from './select';
 import tab from './tab';
 import textField from './textField';
@@ -30,13 +31,14 @@ export default {
   },
   appHeader,
   button,
+  dialog,
   drawer,
   iconButton,
   imageCard,
   loading,
   menuItem,
   messagePanel,
-  modal,
+  modalOverlay,
   select,
   tab,
   textField,

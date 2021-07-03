@@ -1,3 +1,4 @@
+import AButton from '../AButton';
 import ATypography from '../ATypography';
 import ADrawer from './';
 
@@ -20,7 +21,7 @@ export const Drawer = () => ({
 });
 
 export const ShowAndHideModal = () => ({
-  components: { ADrawer, ATypography },
+  components: { AButton, ADrawer, ATypography },
   data() {
     return {
       show: false,
@@ -28,7 +29,7 @@ export const ShowAndHideModal = () => ({
   },
   template: `
     <div>
-      <button @click="show = true">Show</button>
+      <a-button @click="show = true" :is-primary="true">Show Drawer</a-button>
       <a-drawer v-if="show" @close="show = false" id="example-drawer" title="Example Drawer">
         <template v-slot:content>
           <a-typography>Example content in v-slot:content</a-typography>
@@ -41,8 +42,8 @@ export const ShowAndHideModal = () => ({
   `,
 });
 
-export const ModalWithTransition = () => ({
-  components: { ADrawer, ATypography },
+export const WithTransition = () => ({
+  components: { AButton, ADrawer, ATypography },
   data() {
     return {
       show: false,
@@ -50,7 +51,7 @@ export const ModalWithTransition = () => ({
   },
   template: `
     <div>
-      <button @click="show = true">Show</button>
+      <a-button @click="show = true" :is-primary="true">Show Drawer</a-button>
       <transition name="drawer">
         <a-drawer v-if="show" @close="show = false" id="example-drawer" title="Example Drawer">
           <template v-slot:content>
