@@ -5,6 +5,7 @@ import breakpoints from '../breakpoints';
 import actionBar from './actionBar';
 import appHeader from './appHeader';
 import button from './button';
+import drawer from './drawer';
 import iconButton from './iconButton';
 import imageCard from './imageCard';
 import loading from './loading';
@@ -29,6 +30,7 @@ export default {
   },
   appHeader,
   button,
+  drawer,
   iconButton,
   imageCard,
   loading,

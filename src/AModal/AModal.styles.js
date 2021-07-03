@@ -4,10 +4,6 @@ export const Wrapper = styled.div`
   align-items: center;
   display: flex;
   height: 100%;
-  font-family: ${props => props.theme.modal.fontFamily};
-  font-size: ${props => props.theme.modal.fontSize};
-  font-weight: ${props => props.theme.modal.fontWeight};
-  line-height: ${props => props.theme.modal.lineHeight};
   justify-content: center;
   left: 0;
   position: absolute;
@@ -48,7 +44,6 @@ export const Modal = styled.div`
 export const ModalHeader = styled.header`
   align-items: center;
   background-color: ${props => props.theme.modal.header.bgColor};
-  border-bottom: ${props => props.theme.modal.header.borderBottom};
   display: flex;
   flex-shrink: 0;
   height: 60px;
@@ -62,17 +57,7 @@ export const ModalCloseButton = styled.div`
   right: 10px;
 `;
 
-export const ModalTitle = styled.h2`
-  color: ${props => props.theme.modal.title.color};
-  font-family: ${props => props.theme.modal.title.fontFamily};
-  font-size: ${props => props.theme.modal.title.fontSize};
-  font-weight: ${props => props.theme.modal.title.fontWeight};
-  line-height: ${props => props.theme.modal.title.lineHeight};
-  margin: 0;
-`;
-
 export const ModalContent = styled.div`
-  align-items: center;
   display: flex;
   flex-grow: 1;
   min-height: 70px;
