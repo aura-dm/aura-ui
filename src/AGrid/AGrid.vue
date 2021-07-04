@@ -1,7 +1,7 @@
 <template>
   <wrapper>
     <a-loading v-if="isContent" />
-    <grid v-else :class="breakpoints">
+    <grid v-else :class="breakpoints" :gap="gap">
       <a-resizable @resize="onResize" />
       <slot />
     </grid>
@@ -24,6 +24,18 @@ export default {
   computed: {
     isContent() {
       return this.$slots.default === undefined;
+    },
+  },
+  props: {
+    gap: {
+      default() {
+        return {
+          sm: '20px',
+          md: '20px',
+          lg: '30px',
+          xl: '30px',
+        };
+      },
     },
   },
   data() {

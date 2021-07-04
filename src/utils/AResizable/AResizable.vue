@@ -1,5 +1,5 @@
 <template>
-  <wrapper-element ref="main"></wrapper-element>
+  <wrapper-element ref="wrapper"></wrapper-element>
 </template>
 
 <script>
@@ -7,10 +7,12 @@ import ResizeObserver from 'resize-observer-polyfill';
 import { WrapperElement } from './AResizable.styles';
 
 export default {
-  name: 'resizable',
+  name: 'a-resizable',
   components: { WrapperElement },
   mounted() {
-    const { width, height } = this.$refs.main.getBoundingClientRect();
+    const elWrapper = this.$refs.wrapper.$el;
+    console.log(this.$refs);
+    const { width, height } = elWrapper.getBoundingClientRect();
 
     this.$emit('resize', { height, width });
 
@@ -24,7 +26,7 @@ export default {
 
     const observer = new ResizeObserver(resizeHandler);
 
-    observer.observe(this.$refs.main);
+    observer.observe(elWrapper);
   },
 };
 </script>

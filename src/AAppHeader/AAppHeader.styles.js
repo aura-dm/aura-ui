@@ -100,8 +100,12 @@ export const MenuLink = styled('span', { activeClass: String })`
   border: none;
   cursor: pointer;
   margin: 0 0 20px;
-  padding: 0;
+  padding: 0 0 4px;
   position: relative;
+
+  p {
+    color: ${props => props.theme.appHeader.menuItem.color};
+  }
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
     margin: 10px 0 0 0;
