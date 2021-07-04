@@ -1,4 +1,5 @@
 import styled from 'vue-styled-components';
+import ATypography from '../ATypography';
 
 export const WrapperElement = styled.div`
   display: flex;
@@ -7,49 +8,38 @@ export const WrapperElement = styled.div`
   width: 100%;
 `;
 
-export const TextInput = styled.input`
+export const TextInput = styled(ATypography)`
   background-color: ${props => props.theme.textField.input.bgColor};
-  border: ${props => props.theme.textField.input.border};
+  border: none;
+  border-bottom: ${props => props.theme.textField.input.borderBottom};
   border-radius: ${props => props.theme.textField.input.borderRadius};
   color: ${props => props.theme.textField.input.color};
   display: flex;
-  font-family: ${props => props.theme.textField.input.fontFamily};
-  font-size: ${props => props.theme.textField.input.fontSize};
-  font-weight: ${props => props.theme.textField.input.fontWeight};
-  line-height: ${props => props.theme.textField.input.lineHeight};
-  padding: 7px 10px;
+  padding: 5px 0;
   position: relative;
   resize: none;
 
   &:focus {
     background-color: ${props => props.theme.textField.input._focus.bgColor};
-    border: ${props => props.theme.textField.input._focus.border};
+    border-bottom: ${props => props.theme.textField.input._focus.borderBottom};
     box-shadow: ${props => props.theme.textField.input._focus.boxShadow};
     color: ${props => props.theme.textField.input._focus.color};
     outline: none;
   }
 `;
 
-export const TextArea = TextInput.withComponent('textarea');
-
-export const TextLabel = styled.label`
+export const TextLabel = styled(ATypography)`
   color: ${props => props.theme.textField.label.color};
-  font-family: ${props => props.theme.textField.label.fontFamily};
   font-size: ${props => props.theme.textField.label.fontSize};
-  font-weight: ${props => props.theme.textField.label.fontWeight};
   line-height: ${props => props.theme.textField.label.lineHeight};
-  margin: 0 0 3px;
+  margin: 0 0 2px;
 
   .is-focused & {
     color: ${props => props.theme.textField.label._focus.color};
   }
 `;
 
-export const TextErrors = styled.p`
+export const TextErrors = styled(ATypography)`
   color: ${props => props.theme.textField.errors.color};
-  font-family: ${props => props.theme.textField.errors.fontFamily};
-  font-size: ${props => props.theme.textField.errors.fontSize};
-  font-weight: ${props => props.theme.textField.errors.fontWeight};
-  line-height: ${props => props.theme.textField.errors.lineHeight};
   margin: 5px 0 0;
 `;

@@ -1,21 +1,32 @@
+import ATypography from '../ATypography';
 import ATextField from './';
 
 export default { title: 'Text Field' };
 
 export const textField = () => ({
-  components: { ATextField },
+  components: { ATextField, ATypography },
   data() {
     return {
-      value: '',
+      state: '',
+      value: 'My first value',
     };
   },
   methods: {
-    onInput(value) {
-      this.value = value;
+    onBlur() {
+      this.state = 'Blur';
+    },
+    onInput() {
+      this.state = 'Input';
+    },
+    onFocus() {
+      this.state = 'Focus';
     },
   },
   template: `
-    <a-text-field :value="value" @input="onInput" />
+    <div>
+      <a-text-field v-model="value" @blur="onBlur" @focus="onFocus" @input="onInput" />
+      <a-typography>State: {{state}}</a-typography>
+    </div>
   `,
 });
 
@@ -23,7 +34,19 @@ export const withLabel = () => ({
   components: { ATextField },
   data() {
     return {
-      value: '',
+      value: 'My first value',
+    };
+  },
+  template: `
+    <a-text-field v-model="value" label="My Text Field" />
+  `,
+});
+
+export const large = () => ({
+  components: { ATextField },
+  data() {
+    return {
+      value: 'My first value',
     };
   },
   methods: {
@@ -32,7 +55,7 @@ export const withLabel = () => ({
     },
   },
   template: `
-    <a-text-field label="My Text Field" :value="value" @input="onInput" />
+    <a-text-field v-model="value" :is-large="true" />
   `,
 });
 
@@ -40,16 +63,12 @@ export const asTextarea = () => ({
   components: { ATextField },
   data() {
     return {
-      value: '',
+      value:
+        'My first value. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus odio libero, pharetra vel justo nec, tempor hendrerit justo. Suspendisse id tortor vel nulla convallis convallis.',
     };
   },
-  methods: {
-    onInput(value) {
-      this.value = value;
-    },
-  },
   template: `
-    <a-text-field :isMultiLine="true" label="My Text Area" :value="value" @input="onInput" />
+    <a-text-field v-model="value" :isMultiLine="true" label="My Text Area" />
   `,
 });
 

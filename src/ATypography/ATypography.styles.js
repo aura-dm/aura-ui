@@ -16,7 +16,7 @@ const variants = {
   },
   h4: {
     fontSize: '2.6rem',
-    lineHeight: 1.2,
+    lineHeight: 1.4,
   },
   h5: {
     fontSize: '2rem',

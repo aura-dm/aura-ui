@@ -1,25 +1,19 @@
 <template>
   <wrapper-element :class="{ 'is-focused': isFocused }" :disabled="isDisabled">
-    <text-label v-if="label" for="id">{{ label }}</text-label>
+    <text-label v-if="label" component="label" for="id" variant="h6">
+      {{ label }}
+    </text-label>
     <text-input
-      v-if="!isMultiLine"
+      v-bind="$props"
+      :component="isMultiLine ? 'textarea' : 'input'"
       :id="id"
       :name="name"
       :type="type"
       :value="value"
-      @blur="onBlur"
-      @focus="onFocus"
-      @input="$emit('input', $event)"
-    />
-    <text-area
-      v-if="isMultiLine"
-      v-bind="$props"
-      :id="id"
-      :name="name"
-      :value="value"
-      @blur="onBlur"
-      @focus="onFocus"
-      @input="$emit('input', $event)"
+      :variant="isLarge ? 'h4' : 'h5'"
+      @blur.native="onBlur"
+      @focus.native="onFocus"
+      @input.native="$emit('input', $event.target.value)"
     />
     <text-errors v-if="errors">{{ errors }}</text-errors>
   </wrapper-element>
@@ -29,7 +23,6 @@
 import _uniqueId from 'lodash/uniqueId';
 
 import {
-  TextArea,
   TextErrors,
   TextInput,
   TextLabel,
@@ -39,7 +32,6 @@ import {
 export default {
   name: 'a-text-field',
   components: {
-    TextArea,
     TextErrors,
     TextInput,
     TextLabel,
@@ -70,6 +62,12 @@ export default {
     },
     isDisabled: {
       default: false,
+      type: Boolean,
+    },
+    isLarge: {
+      default() {
+        return false;
+      },
       type: Boolean,
     },
     isMultiLine: {
