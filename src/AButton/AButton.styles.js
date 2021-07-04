@@ -21,9 +21,22 @@ export const Wrapper = styled.button`
   text-decoration: none;
   transition: all 150ms ease-in-out;
 
+  &.align-left {
+    justify-content: flex-start;
+  }
+
+  &.align-right {
+    justify-content: flex-end;
+  }
+
   &:disabled {
     opacity: 0.65;
     pointer-events: none;
+  }
+
+  &.is-plain {
+    background-color: transparent;
+    border: none;
   }
 
   &:focus {
@@ -44,11 +57,21 @@ export const Wrapper = styled.button`
     color: ${props => props.theme.button._primary.color};
     fill: ${props => props.theme.button._primary.color};
 
+    &.is-plain {
+      background-color: transparent;
+      border: none;
+      fill: ${props => props.theme.button._primary._plain.color};
+    }
+
     &:hover {
       box-shadow: 0 0 0 2px
         ${props => props.theme.button._primary._hover.outlineColor};
       color: ${props => props.theme.button._primary._hover.color};
       fill: ${props => props.theme.button._primary._hover.color};
+
+      &.is-plain {
+        fill: ${props => props.theme.button._primary._plain.color};
+      }
     }
 
     &:focus {
