@@ -3,7 +3,7 @@ import ATextField from './';
 
 export default { title: 'Text Field' };
 
-export const textField = () => ({
+export const Default = () => ({
   components: { ATextField, ATypography },
   data() {
     return {
@@ -30,7 +30,7 @@ export const textField = () => ({
   `,
 });
 
-export const withLabel = () => ({
+export const WithLabel = () => ({
   components: { ATextField },
   data() {
     return {
@@ -42,7 +42,7 @@ export const withLabel = () => ({
   `,
 });
 
-export const large = () => ({
+export const Large = () => ({
   components: { ATextField },
   data() {
     return {
@@ -59,7 +59,7 @@ export const large = () => ({
   `,
 });
 
-export const asTextarea = () => ({
+export const MultiLine = () => ({
   components: { ATextField },
   data() {
     return {
@@ -72,7 +72,7 @@ export const asTextarea = () => ({
   `,
 });
 
-export const withErrors = () => ({
+export const WithErrors = () => ({
   components: { ATextField },
   data() {
     return {

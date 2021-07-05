@@ -2,7 +2,7 @@ import APicture from './';
 
 export default { title: 'Picture' };
 
-export const picture = () => ({
+export const Default = () => ({
   components: { APicture },
   template: `
     <a-picture

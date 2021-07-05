@@ -3,7 +3,7 @@ import ATab from './';
 
 export default { title: 'Tab' };
 
-export const tab = () => ({
+export const Default = () => ({
   components: { ATab },
   template: `
     <div style="display: flex;">
@@ -13,7 +13,7 @@ export const tab = () => ({
   `,
 });
 
-export const tabsWithActionBar = () => ({
+export const WithActionBar = () => ({
   components: { AActionBar, ATab },
   template: `
     <a-action-bar>

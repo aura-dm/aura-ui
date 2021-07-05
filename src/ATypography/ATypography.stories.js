@@ -2,7 +2,7 @@ import ATypography from './';
 
 export default { title: 'Typography' };
 
-export const typography = () => ({
+export const Default = () => ({
   components: { ATypography },
   template: `
     <div style="display: flex; flex-direction: column;">

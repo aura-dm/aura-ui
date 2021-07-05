@@ -3,7 +3,7 @@ import { AAddIcon } from '../icons';
 
 export default { title: 'Icon Button' };
 
-export const defaultIconButton = () => ({
+export const Default = () => ({
   components: { AIconButton, AAddIcon },
   template: `
   <div>
@@ -26,7 +26,7 @@ export const defaultIconButton = () => ({
   },
 });
 
-export const plainVariant = () => ({
+export const PlainVariant = () => ({
   components: { AIconButton, AAddIcon },
   template: `
     <div>
@@ -51,7 +51,7 @@ export const plainVariant = () => ({
   },
 });
 
-export const disabledIconButton = () => ({
+export const Disabled = () => ({
   components: { AIconButton, AAddIcon },
   template: `
     <div>
@@ -76,7 +76,7 @@ export const disabledIconButton = () => ({
   },
 });
 
-export const buttonAsDiv = () => ({
+export const AsDiv = () => ({
   components: { AIconButton, AAddIcon },
   template: `
     <div>

@@ -5,7 +5,7 @@ import ASelect from './';
 
 export default { title: 'Select Menu' };
 
-export const menuWithButton = () => ({
+export const WithButton = () => ({
   components: { AButton, ASelect },
   methods: {
     onSelect(id) {
@@ -37,7 +37,7 @@ export const menuWithButton = () => ({
   `,
 });
 
-export const menuWithIcon = () => ({
+export const WithIcon = () => ({
   components: { AIconButton, AMoreIcon, ASelect },
   methods: {
     onSelect(id) {

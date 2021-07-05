@@ -4,14 +4,12 @@ import ADialog from './';
 
 export default { title: 'Dialog' };
 
-export const Modal = () => ({
+export const Default = () => ({
   components: { ADialog, ATypography },
   template: `
     <a-dialog id="example-dialog" title="Example Modal">
       <template v-slot:content>
-        <div style="padding: 30px;">
-          <a-typography>Example content in v-slot:content</a-typography>
-        </div>
+        <a-typography>Example content in v-slot:content</a-typography>
       </template>
       <template v-slot:footer>
         <a-typography>Example content in v-slot:footer</a-typography>
@@ -20,7 +18,7 @@ export const Modal = () => ({
   `,
 });
 
-export const ShowAndHideModal = () => ({
+export const ShowAndHide = () => ({
   components: { AButton, ADialog, ATypography },
   data() {
     return {

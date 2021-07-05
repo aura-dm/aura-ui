@@ -10,9 +10,7 @@ export const Drawer = () => ({
   template: `
     <a-drawer id="example-drawer" title="Example Drawer">
       <template v-slot:content>
-        <div style="padding: 30px;">
-          <a-typography>Example content in v-slot:content</a-typography>
-        </div>
+        <a-typography>Example content in v-slot:content</a-typography>
       </template>
       <template v-slot:footer>
         <a-typography>Example content in v-slot:footer</a-typography>

@@ -5,7 +5,7 @@ import AModalOverlay from './';
 
 export default { title: 'Modal Overlay' };
 
-export const ModalOverlay = () => ({
+export const Default = () => ({
   components: { AButton, AModalBody, AModalOverlay, ATypography },
   data() {
     return {

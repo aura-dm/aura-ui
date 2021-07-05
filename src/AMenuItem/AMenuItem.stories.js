@@ -5,7 +5,7 @@ import AMenuItem from './';
 
 export default { title: 'MenuItem' };
 
-export const MenuItems = () => ({
+export const Default = () => ({
   components: { AAddIcon, AListIcon, AMenu, AMenuItem },
   template: `
     <div style="width: 280px;">

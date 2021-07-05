@@ -3,7 +3,7 @@ import AMenuItem from '../AMenuItem';
 
 export default { title: 'Menu' };
 
-export const menu = () => ({
+export const Default = () => ({
   components: { AMenu, AMenuItem },
   template: `
     <a-menu>

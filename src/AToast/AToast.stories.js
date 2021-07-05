@@ -6,7 +6,7 @@ function onDismiss(value) {
   alert(`Dismiss ${value}`);
 }
 
-export const InfoToast = () => ({
+export const Default = () => ({
   components: { AToast },
   methods: {
     onDismiss,
@@ -21,7 +21,7 @@ export const InfoToast = () => ({
   `,
 });
 
-export const SuccessToast = () => ({
+export const Success = () => ({
   components: { AToast },
   methods: {
     onDismiss,
@@ -37,7 +37,7 @@ export const SuccessToast = () => ({
   `,
 });
 
-export const ErrorToast = () => ({
+export const Error = () => ({
   components: { AToast },
   methods: {
     onDismiss,

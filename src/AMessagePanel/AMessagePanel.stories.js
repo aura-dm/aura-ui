@@ -4,7 +4,7 @@ import AMessagePanel from './';
 
 export default { title: 'Message Panel' };
 
-export const MessageAndAction = () => ({
+export const Default = () => ({
   components: { AAddIcon, AButton, AMessagePanel },
   template: `
     <div style="background-color: #eeeeee; height: 400px; position: relative; width: 600px;">

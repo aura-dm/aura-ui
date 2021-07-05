@@ -3,7 +3,7 @@ import AImageCard from './';
 
 export default { title: 'Image Card' };
 
-export const imageCard = () => ({
+export const Default = () => ({
   components: { AImageCard },
   template: `
     <div style="height: 200px; width: 300px;">
