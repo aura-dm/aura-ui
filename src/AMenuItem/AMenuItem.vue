@@ -14,21 +14,29 @@
       <content-left v-if="$slots['content-left']">
         <slot name="content-left" />
       </content-left>
-      <slot />
+      <main-text style="margin: 0;">
+        <slot />
+      </main-text>
     </main-content>
     <slot name="content-right" />
   </component-wrapper>
 </template>
 
 <script>
-import { ComponentWrapper, ContentLeft, MainContent } from './AMenuItem.styles';
+import {
+  ComponentWrapper,
+  ContentLeft,
+  MainContent,
+  MainText,
+} from './AMenuItem.styles';
 
 export default {
   name: 'a-menu-item',
   components: {
+    ComponentWrapper,
     ContentLeft,
     MainContent,
-    ComponentWrapper,
+    MainText,
   },
   props: {
     activeClass: {

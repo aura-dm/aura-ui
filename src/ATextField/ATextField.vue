@@ -58,10 +58,14 @@ export default {
     },
     id: {
       type: String,
-      default: _uniqueId(),
+      default() {
+        return _uniqueId();
+      },
     },
     isDisabled: {
-      default: false,
+      default() {
+        return false;
+      },
       type: Boolean,
     },
     isLarge: {
@@ -71,7 +75,9 @@ export default {
       type: Boolean,
     },
     isMultiLine: {
-      default: false,
+      default() {
+        return false;
+      },
       type: Boolean,
     },
     label: {
@@ -81,11 +87,15 @@ export default {
       type: String,
     },
     type: {
-      default: 'text',
+      default() {
+        return 'text';
+      },
       type: String,
     },
     value: {
-      default: '',
+      default() {
+        return '';
+      },
       type: String,
     },
   },

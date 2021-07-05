@@ -7,7 +7,11 @@
         :id="id"
         :maxWidth="maxWidth"
         :title="title"
-      />
+      >
+        <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
+          <slot :name="slot" v-bind="scope" />
+        </template>
+      </a-modal-body>
     </drawer>
   </a-modal-overlay>
 </template>

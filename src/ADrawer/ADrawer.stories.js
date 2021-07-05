@@ -1,4 +1,5 @@
 import AButton from '../AButton';
+import ATextField from '../ATextField';
 import ATypography from '../ATypography';
 import ADrawer from './';
 
@@ -43,7 +44,7 @@ export const ShowAndHideModal = () => ({
 });
 
 export const WithTransition = () => ({
-  components: { AButton, ADrawer, ATypography },
+  components: { AButton, ADrawer, ATextField, ATypography },
   data() {
     return {
       show: false,
@@ -55,10 +56,14 @@ export const WithTransition = () => ({
       <transition name="drawer">
         <a-drawer v-if="show" @close="show = false" id="example-drawer" title="Example Drawer">
           <template v-slot:content>
-            <a-typography>Example content in v-slot:content</a-typography>
+            <div style="display: flex; flex-direction: column; width: 100%;">
+              <a-text-field :is-large="true" label="Name" style="margin: 0 0 20px;" />
+              <a-text-field label="Description" />
+            </div>
           </template>
           <template v-slot:footer>
-            <a-typography>Example content in v-slot:footer</a-typography>
+            <a-button @click="show = false">Cancel</a-button>
+            <a-button @click="show = false" :is-primary="true">Create</a-button>
           </template>
         </a-drawer>
       </transition>

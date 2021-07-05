@@ -1,8 +1,7 @@
 import styled from 'vue-styled-components';
+import ATypography from '../ATypography';
 
-export const ComponentWrapper = styled('div', {
-  activeClass: String,
-})`
+export const ComponentWrapper = styled('div', { activeClass: String })`
   background-color: ${props => props.theme.menuItem.bgColor};
   border: none;
   border-bottom: ${props => props.theme.menuItem.borderBottom};
@@ -10,13 +9,9 @@ export const ComponentWrapper = styled('div', {
   color: ${props => props.theme.menuItem.color};
   cursor: pointer;
   flex-direction: column;
-  font-family: ${props => props.theme.menuItem.fontFamily};
-  font-size: ${props => props.theme.menuItem.fontSize};
-  font-weight: ${props => props.theme.menuItem.fontWeight};
   display: flex;
   height: 50px;
   justify-content: space-between;
-  line-height: ${props => props.theme.menuItem.lineHeight};
   min-height: 50px;
   padding: 0 10px 0 26px;
   text-decoration: none;
@@ -52,6 +47,10 @@ export const MainContent = styled.div`
   align-items: center;
   display: flex;
   flex-grow: 1;
+`;
+
+export const MainText = styled(ATypography)`
+  color: inherit;
 `;
 
 export const ContentLeft = styled.div`

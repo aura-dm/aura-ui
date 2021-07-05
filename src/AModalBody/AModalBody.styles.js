@@ -15,7 +15,7 @@ export const ModalBodyHeader = styled.header`
   display: flex;
   flex-shrink: 0;
   justify-content: flex-start;
-  padding: 40px;
+  padding: 32px 40px;
   position: relative;
 `;
 
