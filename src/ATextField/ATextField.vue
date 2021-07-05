@@ -8,12 +8,14 @@
       :component="isMultiLine ? 'textarea' : 'input'"
       :id="id"
       :name="name"
+      :style="{ height }"
       :type="type"
       :value="value"
       :variant="isLarge ? 'h4' : 'h5'"
+      ref="input"
       @blur.native="onBlur"
       @focus.native="onFocus"
-      @input.native="$emit('input', $event.target.value)"
+      @input.native="onInput"
     />
     <text-errors v-if="errors">{{ errors }}</text-errors>
   </wrapper-element>
@@ -40,6 +42,7 @@ export default {
   data() {
     return {
       isFocused: false,
+      height: this.defaultHeight,
     };
   },
   methods: {
@@ -51,6 +54,20 @@ export default {
       this.isFocused = true;
       this.$emit('focus', $event);
     },
+    onInput($event) {
+      //this.resize();
+      this.$emit('input', $event.target.value, $event);
+    },
+    /* resize() {
+      if (this.isMultiLine) {
+        const el = this.$refs.input.$el;
+        console.log(el);
+        this.height = el.scrollHeight + 'px';
+      }
+    }, */
+  },
+  mounted() {
+    //this.resize();
   },
   props: {
     errors: {
@@ -61,6 +78,12 @@ export default {
       default() {
         return _uniqueId();
       },
+    },
+    defaultHeight: {
+      default() {
+        return undefined;
+      },
+      type: String,
     },
     isDisabled: {
       default() {

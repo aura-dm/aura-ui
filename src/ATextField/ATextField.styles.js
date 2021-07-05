@@ -15,7 +15,9 @@ export const TextInput = styled(ATypography)`
   border-radius: ${props => props.theme.textField.input.borderRadius};
   color: ${props => props.theme.textField.input.color};
   display: flex;
-  padding: 5px 0;
+  margin: 0;
+  max-height: ${props => props.theme.textField.input.maxHeight};
+  padding: 6px 12px;
   position: relative;
   resize: none;
 
@@ -30,9 +32,7 @@ export const TextInput = styled(ATypography)`
 
 export const TextLabel = styled(ATypography)`
   color: ${props => props.theme.textField.label.color};
-  font-size: ${props => props.theme.textField.label.fontSize};
-  line-height: ${props => props.theme.textField.label.lineHeight};
-  margin: 0 0 2px;
+  margin: 0 0 3px;
 
   .is-focused & {
     color: ${props => props.theme.textField.label._focus.color};

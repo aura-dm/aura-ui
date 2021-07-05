@@ -55,7 +55,7 @@ export const Large = () => ({
     },
   },
   template: `
-    <a-text-field v-model="value" :is-large="true" />
+    <a-text-field v-model="value" :is-large="true" label="My Text Field" />
   `,
 });
 
@@ -68,7 +68,7 @@ export const MultiLine = () => ({
     };
   },
   template: `
-    <a-text-field v-model="value" :isMultiLine="true" label="My Text Area" />
+    <a-text-field v-model="value" defaultHeight="132px" :isMultiLine="true" label="My Text Area" />
   `,
 });
 

@@ -56,7 +56,7 @@ export const WithTransition = () => ({
           <template v-slot:content>
             <div style="display: flex; flex-direction: column; width: 100%;">
               <a-text-field :is-large="true" label="Name" style="margin: 0 0 20px;" />
-              <a-text-field label="Description" />
+              <a-text-field label="Description" height="132px" />
             </div>
           </template>
           <template v-slot:footer>

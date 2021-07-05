@@ -5,12 +5,13 @@ export default {
     color: colors.error,
   },
   input: {
-    bgColor: colors.theme1,
+    bgColor: colors.theme2,
     borderBottom: `1px solid ${colors.theme6}`,
     borderRadius: 0,
     color: colors.text1,
+    maxHeight: '132px', // 5 lines
     _focus: {
-      bgColor: colors.theme1,
+      bgColor: colors.theme2,
       borderBottom: `1px solid ${colors.primary1}`,
       boxShadow: 'none',
       color: colors.text1,
