@@ -28,7 +28,7 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
-    "vue": "^2.6.12",
+    "vue": "^2.6.14",
     "vue-styled-components": "^1.6.0"
   },
   "dependencies": {
@@ -39,10 +39,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
-    "@storybook/addon-actions": "^6.1.17",
-    "@storybook/addon-links": "^6.1.17",
-    "@storybook/addons": "^6.1.17",
-    "@storybook/vue": "^6.1.17",
+    "@storybook/addon-actions": "^6.3.2",
+    "@storybook/addon-links": "^6.3.2",
+    "@storybook/addons": "^6.3.2",
+    "@storybook/vue": "^6.3.2",
     "@vue/cli-plugin-babel": "~4.5.11",
     "@vue/cli-plugin-eslint": "~4.5.11",
     "@vue/cli-plugin-unit-jest": "^4.5.11",
@@ -58,8 +58,8 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.5.0",
-    "vue": "^2.6.12",
+    "vue": "^2.6.14",
     "vue-styled-components": "1.6.0",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.14"
   }
 }
