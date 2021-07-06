@@ -3,23 +3,25 @@ import ATab from './';
 
 export default { title: 'Tab' };
 
-export const tab = () => ({
+export const Default = () => ({
   components: { ATab },
   template: `
     <div style="display: flex;">
-      <a-tab :is-active="true" label="Active Tab" style="margin: 0 20px 0 0;" />
+      <a-tab :is-active="true" label="Active Tab" />
       <a-tab label="Inactive Tab" />
     </div>
   `,
 });
 
-export const tabsWithActionBar = () => ({
+export const WithActionBar = () => ({
   components: { AActionBar, ATab },
   template: `
     <a-action-bar>
       <template v-slot:controls-left>
-        <a-tab :is-active="true" label="Active Tab" />
-        <a-tab label="Inactive Tab" />
+        <div style="display: flex;">
+          <a-tab :is-active="true" label="Active Tab" />
+          <a-tab label="Inactive Tab" />
+        </div>
       </template>
     </a-action-bar>
   `,

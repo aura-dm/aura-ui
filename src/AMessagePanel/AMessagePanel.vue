@@ -1,17 +1,20 @@
 <template>
   <Wrapper>
-    <Message>{{ text }}</Message>
+    <a-typography component="h3" style="margin: 0 0 15px;" variant="h5">
+      {{ text }}
+    </a-typography>
     <slot></slot>
   </Wrapper>
 </template>
 
 <script>
-import { Message, Wrapper } from './AMessagePanel.styles';
+import ATypography from '../ATypography/ATypography.vue';
+import { Wrapper } from './AMessagePanel.styles';
 
 export default {
   name: 'a-message-panel',
   components: {
-    Message,
+    ATypography,
     Wrapper,
   },
   props: {

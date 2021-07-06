@@ -2,20 +2,22 @@ import styled from 'vue-styled-components';
 
 export const Wrapper = styled.button`
   align-items: center;
-  background-color: transparent;
-  border: none;
+  background-color: ${props => props.theme.button.backgroundColor};
+  border: 1px solid ${props => props.theme.button.borderColor};
+  cursor: pointer;
   color: ${props => props.theme.button.color};
   flex-shrink: 0;
   fill: ${props => props.theme.button.color};
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   font-family: ${props => props.theme.button.fontFamily};
   font-size: ${props => props.theme.button.fontSize};
   font-weight: ${props => props.theme.button.fontWeight};
-  height: 36px;
-  line-height: ${props => props.theme.messagePanel.lineHeight};
+  justify-content: center;
+  line-height: ${props => props.theme.button.lineHeight};
   outline: transparent solid 2px;
-  padding: 0 10px;
+  padding: 10px 14px 8px;
+  text-align: center;
   text-decoration: none;
   transition: all 150ms ease-in-out;
 
@@ -23,16 +25,18 @@ export const Wrapper = styled.button`
     justify-content: flex-start;
   }
 
-  &.align-center {
-    justify-content: center;
-  }
-
   &.align-right {
     justify-content: flex-end;
   }
 
   &:disabled {
+    opacity: 0.65;
     pointer-events: none;
+  }
+
+  &.is-plain {
+    background-color: transparent;
+    border: none;
   }
 
   &:focus {
@@ -42,35 +46,39 @@ export const Wrapper = styled.button`
   }
 
   &:hover {
+    box-shadow: 0 0 0 2px ${props => props.theme.button._focus.outlineColor};
     color: ${props => props.theme.button._hover.color};
     fill: ${props => props.theme.button._hover.color};
   }
 
   &.is-primary {
+    background-color: ${props => props.theme.button._primary.backgroundColor};
+    border: 1px solid ${props => props.theme.button._primary.borderColor};
     color: ${props => props.theme.button._primary.color};
     fill: ${props => props.theme.button._primary.color};
 
+    &.is-plain {
+      background-color: transparent;
+      border: none;
+      fill: ${props => props.theme.button._primary._plain.color};
+    }
+
     &:hover {
+      box-shadow: 0 0 0 2px
+        ${props => props.theme.button._primary._hover.outlineColor};
       color: ${props => props.theme.button._primary._hover.color};
       fill: ${props => props.theme.button._primary._hover.color};
+
+      &.is-plain {
+        fill: ${props => props.theme.button._primary._plain.color};
+      }
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px ${props => props.theme.button._primary._focus.outlineColor};
+      box-shadow: 0 0 0 2px
+        ${props => props.theme.button._primary._focus.outlineColor};
       color: ${props => props.theme.button._primary._focus.color};
       fill: ${props => props.theme.button._primary._focus.color};
     }
   }
-`;
-
-export const IconLeft = styled.div`
-  align-items: center;
-  display: flex;
-  margin: 0 5px 0 0;
-`;
-
-export const IconRight = styled.div`
-  align-items: center;
-  display: flex;
-  margin: 0 0 0 5px;
 `;

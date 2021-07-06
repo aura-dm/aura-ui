@@ -2,10 +2,18 @@ import AToast from './';
 
 export default { title: 'Toast Notification' };
 
-export const InfoToast = () => ({
+function onDismiss(value) {
+  alert(`Dismiss ${value}`);
+}
+
+export const Default = () => ({
   components: { AToast },
+  methods: {
+    onDismiss,
+  },
   template: `
     <a-toast
+      @dismiss="onDismiss('Info Toast')"
       id="info"
       text="This is a toast for showing general information."
       title="Info Toast"
@@ -13,10 +21,14 @@ export const InfoToast = () => ({
   `,
 });
 
-export const SuccessToast = () => ({
+export const Success = () => ({
   components: { AToast },
+  methods: {
+    onDismiss,
+  },
   template: `
     <a-toast
+      @dismiss="onDismiss('Success Toast')"
       id="success"
       text="This is a toast for showing something has succeeded!"
       title="Success Toast"
@@ -25,10 +37,14 @@ export const SuccessToast = () => ({
   `,
 });
 
-export const ErrorToast = () => ({
+export const Error = () => ({
   components: { AToast },
+  methods: {
+    onDismiss,
+  },
   template: `
     <a-toast
+      @dismiss="onDismiss('Error Toast')"
       id="error"
       text="This is a toast for showing something has failed :("
       title="Error Toast"

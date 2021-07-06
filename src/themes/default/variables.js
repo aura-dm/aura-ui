@@ -1,4 +1,4 @@
-const primary1 = '#a72a8c';
+const primary1 = 'rgba(167, 42, 140, 1)';
 
 export const fonts = {
   primary: '"Questrial", Helvetica, Arial, sans-serif',
@@ -7,18 +7,23 @@ export const fonts = {
 
 export const colors = {
   primary1,
-  primary2: '#c747ab',
+  primary2: 'rgba(167, 42, 140, 0.6)',
   theme1: '#ffffff',
-  theme2: '#f3f3f3',
-  theme3: '#e1e1e1',
-  theme4: '#dddddd',
-  theme5: '#cccccc',
+  theme2: '#f9f9f9',
+  theme3: '#f4f4f4',
+  theme4: '#eeeeee',
+  theme5: '#e8e8e8',
+  theme6: '#e3e3e3',
+  theme7: '#dddddd',
+  theme8: '#d7d7d7',
+  theme9: '#d2d2d2',
+  theme10: '#cccccc',
   error: '#b81d1d',
   info: primary1,
   success: '#6cb413',
   text1: '#333333',
-  text2: '#4d4d4d',
-  text3: '#666666',
+  text2: '#666666',
+  text3: '#999999',
   textDisabled: '#999999',
   textAlt1: '#ffffff',
   textAlt2: '#cccccc',

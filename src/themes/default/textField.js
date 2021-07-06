@@ -3,33 +3,22 @@ import { colors, fonts } from './variables';
 export default {
   errors: {
     color: colors.error,
-    fontFamily: fonts.secondary,
-    fontSize: '1em',
-    fontWeight: 600,
-    lineHeight: '1.4em',
   },
   input: {
-    bgColor: colors.theme1,
-    border: `1px solid ${colors.theme3}`,
-    borderRadius: '3px',
+    bgColor: colors.theme2,
+    borderBottom: `1px solid ${colors.theme6}`,
+    borderRadius: 0,
     color: colors.text1,
-    fontFamily: fonts.secondary,
-    fontSize: '1em',
-    fontWeight: 600,
-    lineHeight: '1.4em',
+    maxHeight: '132px', // 5 lines
     _focus: {
-      bgColor: colors.theme1,
-      border: `1px solid ${colors.theme3}`,
-      boxShadow: `0 0 0 2px ${colors.theme3}`,
+      bgColor: colors.theme2,
+      borderBottom: `1px solid ${colors.primary1}`,
+      boxShadow: 'none',
       color: colors.text1,
     },
   },
   label: {
-    color: colors.text1,
-    fontFamily: fonts.secondary,
-    fontSize: '1em',
-    fontWeight: 600,
-    lineHeight: '1.4em',
+    color: colors.text2,
     _focus: {
       color: colors.primary1,
     },

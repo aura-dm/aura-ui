@@ -4,17 +4,18 @@
     <a-info-icon v-if="type === TOAST_TYPES.INFO" class="icon" />
     <a-check-circle-icon v-if="type === TOAST_TYPES.SUCCESS" class="icon" />
     <toast-content>
-      <toast-title v-if="title">{{ title }}</toast-title>
+      <toast-title v-if="title" variant="h6">{{ title }}</toast-title>
       <toast-text v-if="text">{{ text }}</toast-text>
     </toast-content>
-    <a-button class="close-btn" @click="$emit('dismiss', id)">
+    <a-icon-button @click="$emit('dismiss', id)" variant="plain">
       <a-close-icon />
-    </a-button>
+    </a-icon-button>
   </wrapper>
 </template>
 
 <script>
 import AButton from '../AButton';
+import AIconButton from '../AIconButton/AIconButton.vue';
 import ACheckCircleIcon from '../icons/ACheckCircleIcon';
 import ACloseIcon from '../icons/ACloseIcon';
 import AErrorIcon from '../icons/AErrorIcon';
@@ -30,10 +31,10 @@ export const TOAST_TYPES = {
 export default {
   name: 'a-toast',
   components: {
-    AButton,
     ACheckCircleIcon,
     ACloseIcon,
     AErrorIcon,
+    AIconButton,
     AInfoIcon,
     ToastContent,
     ToastText,

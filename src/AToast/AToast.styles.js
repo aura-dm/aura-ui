@@ -1,4 +1,5 @@
 import styled from 'vue-styled-components';
+import ATypography from '../ATypography';
 
 export const Wrapper = styled.div`
   align-items: center;
@@ -34,20 +35,12 @@ export const ToastContent = styled.div`
   padding: 0 10px 0 20px;
 `;
 
-export const ToastText = styled.p`
+export const ToastText = styled(ATypography)`
   color: ${props => props.theme.toast.text.color};
-  font-family: ${props => props.theme.toast.text.fontFamily};
-  font-size: ${props => props.theme.toast.text.fontSize};
-  font-weight: ${props => props.theme.toast.text.fontWeight};
-  line-height: ${props => props.theme.toast.text.lineHeight};
   margin: 0;
 `;
 
-export const ToastTitle = styled.h3`
+export const ToastTitle = styled(ATypography)`
   color: ${props => props.theme.toast.title.color};
-  font-family: ${props => props.theme.toast.title.fontFamily};
-  font-size: ${props => props.theme.toast.title.fontSize};
-  font-weight: ${props => props.theme.toast.title.fontWeight};
-  line-height: ${props => props.theme.toast.title.lineHeight};
-  margin: 0 0 2px;
+  margin: 0 0 5px;
 `;

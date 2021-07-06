@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import Component from './index.vue';
 
-describe('AText', () => {
+describe('ADialog', () => {
   let vm;
   let wrapper;
   beforeEach(() => {

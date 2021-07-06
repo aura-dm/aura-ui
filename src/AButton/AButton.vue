@@ -1,49 +1,35 @@
 <template>
   <wrapper
     v-bind="$props"
-    :align-text="alignText"
+    v-on="$listeners"
     :as="component"
     :class="{
+      'align-left': align === 'left',
+      'align-right': align === 'right',
+      'is-plain': variant === 'plain',
       'is-primary': isPrimary,
-      'align-left': alignText === 'left',
-      'align-center': alignText === 'center',
-      'align-right': alignText === 'right'
     }"
     :disabled="isDisabled"
     :type="type"
-    @click="onClick"
   >
-    <icon-left v-if="$scopedSlots['icon-left']">
-      <slot name="icon-left" />
-    </icon-left>
     <slot></slot>
-    <icon-right v-if="$scopedSlots['icon-right']">
-      <slot name="icon-right" />
-    </icon-right>
   </wrapper>
 </template>
 
 <script>
-import { IconLeft, IconRight, Wrapper } from './AButton.styles';
+import { Wrapper } from './AButton.styles';
 
 export default {
   name: 'a-button',
   components: {
-    IconLeft,
-    IconRight,
     Wrapper,
   },
-  methods: {
-    onClick(evt) {
-      this.$emit('click', evt);
-    },
-  },
   props: {
-    alignText: {
+    align: {
       default: 'center',
       type: String,
       validator: value => {
-        return value.match(/(left|center|right)/);
+        return value.match(/(center|left|right)/);
       },
     },
     component: {
@@ -96,6 +82,15 @@ export default {
       type: String,
       validator: value => {
         return value.match(/(button|submit)/);
+      },
+    },
+    variant: {
+      default: () => {
+        return 'default';
+      },
+      type: String,
+      validator: value => {
+        return value.match(/(default|plain)/);
       },
     },
   },

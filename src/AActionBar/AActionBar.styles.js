@@ -5,9 +5,9 @@ export const Wrapper = styled.div`
   background-color: ${props => props.theme.actionBar.bgColor};
   border-bottom: ${props => props.theme.actionBar.borderBottom};
   display: flex;
-  height: 40px;
   justify-content: space-between;
   margin: 0 0 20px;
+  min-height: 40px;
 `;
 
 export const ControlsLeft = styled.div`

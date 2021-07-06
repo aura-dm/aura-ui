@@ -3,7 +3,7 @@ import { injectGlobal } from 'vue-styled-components';
 const GlobalStyles = injectGlobal`
   html {
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 10px;
   }
 
   *,
