@@ -1,7 +1,7 @@
 <template>
   <wrapper :class="{ 'can-hover': enableHover }">
     <card-image class="image">
-      <a-picture :height="imageHeight" :src="imageUrl" />
+      <a-picture :fill-type="fillType" :height="imageHeight" :src="imageUrl" />
     </card-image>
     <main-title v-if="title" component="h3" variant="h5">
       {{ title }}
@@ -18,21 +18,15 @@
 </template>
 
 <script>
-import APicture from '../APicture';
+import APicture, { TYPES } from '../APicture';
 import {
   CardImage,
   Controls,
   Extra,
   MainTitle,
-  MetaContent,
   SubTitle,
   Wrapper,
 } from './AImageCard.styles';
-
-export const TYPES = {
-  FILL: 'fill',
-  FIT: 'fit',
-};
 
 export default {
   name: 'a-image-card',
@@ -49,6 +43,13 @@ export default {
     enableHover: {
       default: false,
       type: Boolean,
+    },
+    fillType: {
+      default: TYPES.FILL,
+      type: String,
+      validator: value => {
+        return [TYPES.FILL, TYPES.FIT].includes(value);
+      },
     },
     imageHeight: {
       default: '200px',

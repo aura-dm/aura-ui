@@ -11,7 +11,6 @@ export default {
   components: { WrapperElement },
   mounted() {
     const elWrapper = this.$refs.wrapper.$el;
-    console.log(this.$refs);
     const { width, height } = elWrapper.getBoundingClientRect();
 
     this.$emit('resize', { height, width });

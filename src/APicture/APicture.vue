@@ -3,7 +3,8 @@
     <a-loading v-if="src && isLoading" />
     <picture-image
       :class="{
-        fillType: true,
+        fill: fillType === TYPES.FILL,
+        fit: fillType === TYPES.FIT,
         show: isLoading === false,
       }"
       :src="src"
@@ -32,6 +33,7 @@ export default {
     return {
       image: undefined,
       isLoading: true,
+      TYPES,
     };
   },
   destroyed() {

@@ -1,15 +1,16 @@
+import AImageCard from '../AImageCard';
 import AGrid from './';
 
 export default { title: 'Grid' };
 
 const content = `
-  <div style="background-color: rgba(167,42,140,1);">Item 1</div>
-  <div style="background-color: rgba(167,42,140,1);">Item 2</div>
-  <div style="background-color: rgba(167,42,140,1);">Item 3</div>
-  <div style="background-color: rgba(167,42,140,1);">Item 4</div>
-  <div style="background-color: rgba(167,42,140,1);">Item 5</div>
-  <div style="background-color: rgba(167,42,140,1);">Item 6</div>
-  <div style="background-color: rgba(167,42,140,1);">Item 7</div>
+  <div style="background-color: rgba(167,42,140,1); height: 40px;">Item 1</div>
+  <div style="background-color: rgba(167,42,140,1); height: 40px;">Item 2</div>
+  <div style="background-color: rgba(167,42,140,1); height: 40px;">Item 3</div>
+  <div style="background-color: rgba(167,42,140,1); height: 40px;">Item 4</div>
+  <div style="background-color: rgba(167,42,140,1); height: 40px;">Item 5</div>
+  <div style="background-color: rgba(167,42,140,1); height: 40px;">Item 6</div>
+  <div style="background-color: rgba(167,42,140,1); height: 40px;">Item 7</div>
 `;
 
 const style = {
@@ -71,6 +72,39 @@ export const CustomGap = () => ({
   template: `
     <a-grid :gap="gap" :style="style">
       ${content}
+    </a-grid>
+  `,
+});
+
+export const ImageCards = () => ({
+  components: { AGrid, AImageCard },
+  template: `
+    <a-grid>
+      <a-image-card
+        image-url="https://cdn.dribbble.com/users/1536976/screenshots/9395436/media/26cdea2efc0adf570c2e94a9f8646fdd.png"
+        imageHeight="160px"
+        title="Example Image Card 1"
+      />
+      <a-image-card
+        image-url="https://cdn.dribbble.com/users/124454/screenshots/15688254/media/b36fb2e24524c7d91bc1f9fb3961b7c4.png?compress=1&resize=1600x1200"
+        imageHeight="160px"
+        title="Example Image Card 2"
+      />
+      <a-image-card
+        image-url="https://cdn.dribbble.com/users/1536976/screenshots/9395436/media/26cdea2efc0adf570c2e94a9f8646fdd.png"
+        imageHeight="160px"
+        title="Example Image Card 3"
+      />
+      <a-image-card
+        image-url="https://cdn.dribbble.com/users/774375/screenshots/15976853/media/16f58b00df08425e804f29d84d7d8b59.png?compress=1&resize=1600x1200"
+        imageHeight="160px"
+        title="Example Image Card 4"
+      />
+      <a-image-card
+        image-url="https://cdn.dribbble.com/users/1536976/screenshots/9395436/media/26cdea2efc0adf570c2e94a9f8646fdd.png"
+        imageHeight="160px"
+        title="Example Image Card 5"
+      />
     </a-grid>
   `,
 });
