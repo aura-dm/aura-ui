@@ -5,21 +5,7 @@ import ADrawer from './';
 
 export default { title: 'Drawer' };
 
-export const Drawer = () => ({
-  components: { ADrawer, ATypography },
-  template: `
-    <a-drawer id="example-drawer" title="Example Drawer">
-      <template v-slot:content>
-        <a-typography>Example content in v-slot:content</a-typography>
-      </template>
-      <template v-slot:footer>
-        <a-typography>Example content in v-slot:footer</a-typography>
-      </template>
-    </a-drawer>
-  `,
-});
-
-export const ShowAndHideModal = () => ({
+export const Default = () => ({
   components: { AButton, ADrawer, ATypography },
   data() {
     return {
@@ -29,7 +15,13 @@ export const ShowAndHideModal = () => ({
   template: `
     <div>
       <a-button @click="show = true" :is-primary="true">Show Drawer</a-button>
-      <a-drawer v-if="show" @close="show = false" id="example-drawer" title="Example Drawer">
+      <a-drawer
+        v-if="show"
+        @close="show = false"
+        id="example-drawer"
+        style="z-index: 1000;"
+        title="Example Drawer"
+      >
         <template v-slot:content>
           <a-typography>Example content in v-slot:content</a-typography>
         </template>
@@ -52,7 +44,13 @@ export const WithTransition = () => ({
     <div>
       <a-button @click="show = true" :is-primary="true">Show Drawer</a-button>
       <transition name="drawer">
-        <a-drawer v-if="show" @close="show = false" id="example-drawer" title="Example Drawer">
+        <a-drawer
+          v-if="show"
+          @close="show = false"
+          id="example-drawer"
+          style="z-index: 1000;"
+          title="Example Drawer"
+        >
           <template v-slot:content>
             <div style="display: flex; flex-direction: column; width: 100%;">
               <a-text-field :is-large="true" label="Name" style="margin: 0 0 20px;" />

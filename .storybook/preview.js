@@ -13,17 +13,7 @@ export const decorators = [
     },
     template: `
       <theme-provider :theme="theme">
-        <div style="
-          box-sizing: border-box;
-          height: 100%;
-          left: 0;
-          padding: 20px;
-          position: absolute;
-          top: 0;
-          width: 100%;
-        ">
-          <story />
-        </div>
+        <story />
       </theme-provider>
     `,
   }),

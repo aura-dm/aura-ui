@@ -13,7 +13,7 @@ export const Default = () => ({
     };
   },
   template: `
-  <div>
+  <div style="height: 360px; position: relative;">
     <a-button
       @click="show = !show"
       :is-primary="true"
@@ -21,7 +21,7 @@ export const Default = () => ({
     >
       Toggle Overlay
     </a-button>
-    <div style="background-color: #666666; height: 500px; position: absolute; width: 500px;">
+    <div style="background-color: #666666; height: 300px; position: absolute; width: 500px;">
       <a-modal-overlay v-if="show" />
     </div>
   </div>
@@ -36,7 +36,7 @@ export const WithTransition = () => ({
     };
   },
   template: `
-    <div>
+    <div style="height: 360px; position: relative;">
       <a-button
         @click="show = !show"
         :is-primary="true"
@@ -44,7 +44,7 @@ export const WithTransition = () => ({
       >
         Toggle Overlay
       </a-button>
-      <div style="background-color: #666666; height: 500px; position: absolute; width: 500px;">
+      <div style="background-color: #666666; height: 300px; position: absolute; width: 500px;">
         <transition name="overlay">
           <a-modal-overlay v-if="show" />
         </transition>
